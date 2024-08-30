@@ -329,7 +329,7 @@ proc drawCubeAtPos
     push bp
     mov bp, sp   
     pusha   
-    mov ax, 2  ; Hide mouse so it wont disterb the printing
+    mov ax, 2  ; Hide cursor so it wont disturb the printing
     int 33h  
     mov si, 0 ; SI is the outter loop index
   start_outter_loop_in_draw_cube_at_pos:  
@@ -381,7 +381,7 @@ proc arrayToPixels
     
     mov si, [ARRAY_FOR_ARRAY_TO_PIXELS] ; Si is the start index of the given array
     
-    mov ax, 2 ; Hide mouse so it wont disterb the printing on the screen
+    mov ax, 2 ; Hide cursor so it wont disturb the printing on the screen
     int 33h  
 	
     mov cx, 0  ; CX is now the outter loop index
@@ -874,7 +874,7 @@ proc printScreen
     mov bp, sp
     pusha
 	mov cx, 0  
-	mov ax, 2  ; Hide mouse so it wont disterb the printing
+	mov ax, 2  ; Hide cursor so it wont disturb the printing
     int 33h  
   start_outter_loop_print_screen:
     push cx
@@ -1172,7 +1172,7 @@ proc mainLoop
     inc cx             
     loop main_loop_mouse_click_loop  
   player_won_main_loop:     
-    mov ax, 2  ; Hide mouse so it wont disterb the printing
+    mov ax, 2  ; Hide cursor so it wont disturb the printing
     int 33h             
     
 	lea si, WonScreenString 
@@ -1182,7 +1182,7 @@ proc mainLoop
     call printScreen     
     jmp end_main_loop
   player_died_main_loop:    
-    mov ax, 2  ; Hide mouse so it wont disterb the printing
+    mov ax, 2  ; Hide cursor so it wont disturb the printing
     int 33h  
     
     lea si, DiedScreenString 
