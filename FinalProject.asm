@@ -11,7 +11,7 @@ data segment
     ; add your data here! 
     ;variables    
     pkey db 08, "press any key...$"  
-    ; 2d arrays that use for printing costume cubes
+    ; 2d arrays to define image
  
 	
    Flag2DArr  db 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
@@ -120,7 +120,7 @@ data segment
     
 	; Grid size
     CubeOpenCloseGrid db 100 dup(0)  ; Grid that represent if cubes are open or closed  
-    NumGrid db 100 dup(0)  ; Grid that contains numbers -1 to 8 that each one represenr the number of mines near this cube ( -1 is mine)
+    NumGrid db 100 dup(0)  ; Grid that contains numbers -1 to 8 that each one represent the number of mines near this cube ( -1 is mine)
     GridLength dw 100  ; Length of the grid
     GridLineLength dw 10  ; Length of line in the grid
     
